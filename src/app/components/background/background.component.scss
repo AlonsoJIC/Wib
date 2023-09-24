@@ -6,8 +6,8 @@
   }
   @return unquote($value);
 }
-$shadows-small: multiple-box-shadow(400);
-$shadows-medium: multiple-box-shadow(100);
+$shadows-small: multiple-box-shadow(150);
+$shadows-medium: multiple-box-shadow(50);
 $shadows-big: multiple-box-shadow(30);
 
 #stars {
