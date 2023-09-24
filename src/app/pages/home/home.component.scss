@@ -1,0 +1,99 @@
+@import '../../../styles.scss';
+
+section {
+  top: 0;
+  position: fixed;
+}
+.outer  {
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+}
+.inner {
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+  margin-top: 10%;
+}
+.bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  background-size: cover;
+  background-position: center;
+}
+.semiText {
+  font-family: 'Anton', sans-serif;
+  font-size: 50px;
+  letter-spacing: -0.025em;
+  line-height: 0.95em;
+  color: var(--white);
+  text-transform: uppercase;
+}
+.titleText {
+
+  @include title(80px);
+  margin-bottom: 0;
+  letter-spacing: -0.020em;
+  line-height: 0.70em;
+  color: var(--white);
+
+}
+span {
+  font-size: 15px;
+  margin-left: -22px;
+}
+
+/*
+font-family: 'Anton', sans-serif;
+font-family: 'League Gothic', sans-serif;
+font-family: 'Poppins', sans-serif;
+ */
+
+.home {
+  background-color: var(--black);
+}
+.first {
+  .bg {
+    background-image: $bg-gradient,
+    url(https://images.unsplash.com/photo-1570126646281-5ec88111777f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1441&q=80)
+  }
+}
+.second {
+  .bg {
+    background-image: $bg-gradient,
+    url(https://images.unsplash.com/photo-1589561253898-768105ca91a8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80)
+  }
+}
+.third {
+  .bg {
+    background-image: $bg-gradient,
+      url(https://images.unsplash.com/photo-1656706939891-04996ef6070e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80)
+  }
+}
+.fourth {
+  .bg {
+    background-image: $bg-gradient,
+      url(https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1510&q=80);
+  }
+}
+.fifth {
+  .bg {
+    background-image: $bg-gradient,
+      url(https://images.unsplash.com/photo-1518893494013-481c1d8ed3fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80);
+  }
+}
+
+/*
+  1-DO GOOD THINKS   https://images.unsplash.com/photo-1570126646281-5ec88111777f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1441&q=80
+  2-TURN IDEAS IN TO REALITY  https://images.unsplash.com/photo-1589561253898-768105ca91a8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80
+  3-WEB DESIGN  https://images.unsplash.com/photo-1656706939891-04996ef6070e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80
+  4-I DESIGN AND DEVELOP EXPERIENCES THAT MAKE PPL LIVES SIMPLE  https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1510&q=80
+  5-THIS MUST BE THE PLACE  https://images.unsplash.com/photo-1518893494013-481c1d8ed3fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80
+
+  -GUY WORKING  https://images.unsplash.com/photo-1572274408891-758281498b72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80
+ */

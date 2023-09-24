@@ -1,0 +1,59 @@
+.containerCat  {
+  width: 15%;
+  position: fixed;
+  left: 60%;
+  bottom: 55%;
+  z-index: -2;
+}
+svg {
+  width: 50%;
+  overflow: visible;
+  transform: translate(-150%, 50%);
+}
+
+#bongo-cat {
+  fill: var(--transparent);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 4;
+  .laptop-cover ,
+  .headphone .band {
+    fill: none;
+  }
+  .paw, .head {
+    stroke: var(--orange);
+  }
+  .laptop-keyboard {
+    stroke-width: 2;
+  }
+  .terminal-code {
+    stroke-width: 5;
+  }
+  .music .note,
+  .laptop-base,
+  .laptop-cover{
+    stroke: var(--violet);
+  }
+  .paw .pads {
+    stroke: var(--pink);
+  }
+  .table line,
+  .headphone .band,
+  .headphone .speaker path:nth-child(3) {
+    stroke: var(--cyan);
+  }
+  .terminal-frame,
+  .laptop-keyboard,
+  .headphone .speaker path:nth-child(2) {
+    stroke: var(--blue);
+  }
+  .headphone .speaker path:first-child {
+    stroke: var(--green);
+  }
+  .terminal-code {
+    stroke: var(--white);
+  }
+}
+
+@media (max-width: 768px) {
+}

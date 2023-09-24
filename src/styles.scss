@@ -1,1 +1,63 @@
-/* You can add global styles to this file, and also import other style files */
+/*
+font-family: 'Anton', sans-serif;
+font-family: 'League Gothic', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Poppins', sans-serif;
+*/
+body {
+  background: var(--black)
+}
+/* COLORS */
+$bg-gradient: linear-gradient(
+  180deg,
+  rgba(0, 0, 0, 0.6) 0%,
+  rgba(0, 0, 0, 0.801) 100%
+);
+:root {
+  --transparent: #00000000;
+  --green: #a5ea9b;
+  --pink: #df98f5;
+  --blue: #569cfa;
+  --cyan: #7ed1e2;
+  --orange: #ff9f45;
+  --violet: #ff61d8;
+  --lile: #9c27b0;
+  --purple: #673ab7;
+  --white: #ffffff;
+  --black: #000000;
+  --bg:
+  radial-gradient(
+    60vmax 60vmax at 0% 0%,
+    hsl(240, 100%, 2%) 0%,
+    hsla(240, 100%, 2%, 0.753) 95%),
+  radial-gradient(
+    80vmax 50vmax at 110% -10%,
+    hsla(175, 100%, 60%, 0.9) 0%,
+    hsla(200, 100%, 50%, 0.5) 50%,
+    hsla(240, 100%, 50%, 0) 95%),
+  radial-gradient(
+    90vmax 50vmax at 50vmax 50vmax,
+    hsla(260, 100%, 60%, 0.9) 0%,
+    hsla(240, 100%, 60%, 0) 95%)
+  }
+
+
+/* TEXTS / TITLES */
+@mixin normalText($valor){
+  font-family: 'Poppins', sans-serif;
+  font-size: $valor;
+}
+@mixin title($valor){
+  font-family: 'Montserrat', sans-serif;
+  font-weight:bolder;
+  font-size: $valor;
+}
+
+/* BORDER */
+@mixin borderRadius($valor){
+  -webkit-border-radius: $valor;
+  -moz-border-radius: $valor;
+  -ms-border-radius: $valor;
+  -o-border-radius: $valor;
+  border-radius: $valor;
+}

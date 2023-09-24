@@ -1,0 +1,42 @@
+@import '../../../styles.scss';
+
+.navbar{
+  padding: 0 50px;
+}
+#ulList {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.37);
+}
+.nav-link{
+  color: white;
+}
+.nav-item{
+  @include normalText(16px);
+  padding: 2px;
+  margin: 2px;
+  border-radius: 10px;
+
+}
+#navItem1:hover {
+  background-color: var(--orange) ;
+  @include borderRadius(20px);
+}
+#navItem2:hover {
+  background-color: var(--pink);
+  @include borderRadius(20px);
+}
+#navItem3:hover {
+  background-color: var(--violet);
+  @include borderRadius(20px);
+}
+#navItem4:hover {
+  background-color: var(--purple);
+  @include borderRadius(20px);
+}
+#navItem5:hover {
+  background-color: var(--green) ;
+  @include borderRadius(20px);
+}
+
+
+
+
