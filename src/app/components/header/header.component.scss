@@ -1,7 +1,12 @@
 @import '../../../styles.scss';
+.navbar-collapse.show {
+  background-color: black; /* Cambia el color de fondo del menú desplegado a negro */
+  z-index: 2; /* Asegura que el menú desplegado esté encima del contenido */
+  /* Añade cualquier otro estilo que desees para el menú desplegado */
+}
 
 .navbar{
-  padding: 0 50px;
+  padding: 0 0px;
 }
 #ulList {
   border-bottom: 1px solid rgba(255, 255, 255, 0.37);
@@ -14,7 +19,6 @@
   padding: 2px;
   margin: 2px;
   border-radius: 10px;
-
 }
 #navItem1:hover {
   background-color: var(--orange) ;
@@ -36,7 +40,3 @@
   background-color: var(--green) ;
   @include borderRadius(20px);
 }
-
-
-
-
