@@ -7,6 +7,7 @@ import { gsap } from 'gsap';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+
   ngOnInit() {
     const sections = document.querySelectorAll<HTMLElement>("section");
     const images = document.querySelectorAll<HTMLElement>(".bg");
@@ -16,6 +17,7 @@ export class HomeComponent implements OnInit {
     const hiddenElements = document.querySelectorAll('.hidden');
     let currentIndex = -1;
     let animating: boolean;
+    let touchStartY: number | null = null;
 
     gsap.set(outerWrappers, { yPercent: 100 });
     gsap.set(innerWrappers, { yPercent: -100 });
@@ -26,10 +28,9 @@ export class HomeComponent implements OnInit {
       }
     });
 
-    //FUNCION DE ANIMACION
     function gotoSection(index: number, direction: number) {
       if (index < 0 || index >= sections.length || animating) {
-        return;  //EVITAR ANIMACION EN BUCLE, PONIENDO LIMITES
+        return;
       }
       animating = true;
       const fromTop = direction === -1;
@@ -38,7 +39,6 @@ export class HomeComponent implements OnInit {
         defaults: { duration: 1.25, ease: "power1.inOut" },
         onComplete: () => {
           animating = false;
-          // Llama a la función después de la animación completa
           handleAnimationComplete();
         },
       });
@@ -77,13 +77,11 @@ export class HomeComponent implements OnInit {
           },
           0.2
         );
-
       currentIndex = index;
     }
 
-
     function handleAnimationComplete() {
-      // logica adicional despues de que la animacion se completa
+      // lógica adicional después de que la animación se completa
     }
 
     window.addEventListener("wheel", (e) => {
@@ -96,10 +94,23 @@ export class HomeComponent implements OnInit {
       }
     });
 
+    window.addEventListener("touchstart", (e) => {
+      touchStartY = e.touches[0].clientY;
+    });
+
+    window.addEventListener("touchmove", (e) => {
+      if (!animating && touchStartY !== null) {
+        const touchEndY = e.touches[0].clientY;
+        const deltaY = touchEndY - touchStartY;
+        if (deltaY > 0) {
+          gotoSection(currentIndex - 1, -1);
+        } else if (deltaY < 0) {
+          gotoSection(currentIndex + 1, 1);
+        }
+        touchStartY = null;
+      }
+    });
+
     gotoSection(0, 1);
-
-
   }
 }
-
-
