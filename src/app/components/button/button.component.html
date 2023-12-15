@@ -1,0 +1,9 @@
+<a class="button" [ngClass]="{'red-button': color === 'red', 'green-button': color === 'green', 'blue-button': color === 'blue', 'pink-button': color === 'pink', 'white-button': color === 'white'}">
+  <ng-content></ng-content>
+</a>
+
+
+<!-- Se utilizan importandolos asi, y son reutilizables
+    <app-button color="white" [routerLink]="['/servicios']">Nuestros servicios</app-button>
+    <app-button color="green" [routerLink]="['/inicio']">Quienes somos</app-button>
+ -->

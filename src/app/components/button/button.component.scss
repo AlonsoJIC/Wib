@@ -1,0 +1,107 @@
+/*BODY*/
+
+body, .button:after {
+  background: var(--black);
+}
+
+
+.red-button, .red-button:before {
+  background: rgba(234,110,72,1);
+  background: -moz-linear-gradient(45deg, rgba(234,110,72,1) 0%, rgba(188,26,99,1) 100%);
+  background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(234,110,72,1)), color-stop(100%, rgba(188,26,99,1)));
+  background: -webkit-linear-gradient(45deg, rgba(234,110,72,1) 0%, rgba(188,26,99,1) 100%);
+  background: -o-linear-gradient(45deg, rgba(234,110,72,1) 0%, rgba(188,26,99,1) 100%);
+  background: -ms-linear-gradient(45deg, rgba(234,110,72,1) 0%, rgba(188,26,99,1) 100%);
+  background: linear-gradient(45deg, rgba(234,110,72,1) 0%, rgba(188,26,99,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ea6e48', endColorstr='#bc1a63', GradientType=1 );
+}
+.green-button, .green-button:before {
+  background: var(--green);
+  background: -moz-linear-gradient(45deg,var(--green) 0%, var(--light-green) 100%);
+  background: -webkit-gradient(left bottom, right top, color-stop(0%, var(--green)), color-stop(100%, var(--light-green)));
+  background: -webkit-linear-gradient(45deg, var(--green) 0%, var(--light-green) 100%);
+  background: -o-linear-gradient(45deg, var(--green) 0%, var(--light-green) 100%);
+  background: -ms-linear-gradient(45deg, var(--green) 0%, var(--light-green) 100%);
+  background: linear-gradient(45deg, var(--green) 0%, var(--light-green) 100%);
+}
+.blue-button, .blue-button:before {
+  background: var(--blue);
+  background: -moz-linear-gradient(45deg, var(--blue) 0%, var(--cyan) 100%);
+  background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(5,118,255,1)), color-stop(100%, var(--cyan)));
+  background: -webkit-linear-gradient(45deg, var(--blue) 0%, var(--cyan) 100%);
+  background: -o-linear-gradient(45deg, var(--blue) 0%, var(--cyan) 100%);
+  background: -ms-linear-gradient(45deg, var(--blue) 0%, var(--cyan) 100%);
+  background: linear-gradient(45deg, var(--blue) 0%, var(--cyan) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0576ff', endColorstr='#24f8ff', GradientType=1 );
+}
+.pink-button, .pink-button:before {
+  background: var(--pink);
+  background: -moz-linear-gradient(45deg, var(--pink) 0%, var(--purple) 100%);
+  background: -webkit-gradient(left bottom, right top, color-stop(0%, var(--pink)), color-stop(100%, var(--purple)));
+  background: -webkit-linear-gradient(45deg, var(--pink) 0%, var(--purple) 100%);
+  background: -o-linear-gradient(45deg, var(--pink) 0%, var(--purple) 100%);
+  background: -ms-linear-gradient(45deg, var(--pink) 0%, var(--purple) 100%);
+  background: linear-gradient(45deg, var(--pink) 0%, var(--purple) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e748ea', endColorstr='#4b1abc', GradientType=1 );
+}
+.white-button, .white-button:before {
+  background: var(--white);
+  background: -moz-linear-gradient(45deg,var(--white) 0%,var(--white) 100%);
+  background: -webkit-gradient(left bottom, right top, color-stop(0%, var(--white)), color-stop(100%, var(--white)));
+  background: -webkit-linear-gradient(45deg, var(--white) 0%, var(--white) 100%);
+  background: -o-linear-gradient(45deg, var(--white) 0%, var(--white) 100%);
+  background: -ms-linear-gradient(45deg, var(--white) 0%, var(--white) 100%);
+  background: linear-gradient(45deg, var(--white) 0%, var(--white) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffc107', endColorstr='#ff5722', GradientType=1 );
+}
+
+/*BASE BUTTON*/
+.button {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+
+  padding: 15px;
+  margin-right: 10px;
+  font-size: 1em;
+
+  font-weight: bolder;
+  transition: all .5s;
+  background-clip: none;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.button:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  border-radius: 50px;
+  transition: all .5s;
+}
+.button:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  bottom: 2px;
+  right: 2px;
+  z-index: -1;
+  border-radius: 50px;
+  transition: all .5s;
+}
+.button:hover {
+  text-shadow: 0px 0px 0px rgb(0, 0, 0);
+}
+.button:hover:after {
+  left: 100%;
+  top: 100%;
+  bottom: 100%;
+  right: 100%;
+}

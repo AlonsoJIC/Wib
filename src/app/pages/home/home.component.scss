@@ -27,21 +27,14 @@ section {
   background-position: center;
 }
 .semiText {
-  font-family: 'Anton', sans-serif;
-  font-size: 50px;
-  letter-spacing: -0.025em;
-  line-height: 0.95em;
-  color: var(--white);
-  text-transform: uppercase;
+  @include titles;
 }
 .titleText {
-
   @include title(80px);
   margin-bottom: 0;
   letter-spacing: -0.020em;
   line-height: 0.70em;
   color: var(--white);
-
 }
 span {
   font-size: 15px;

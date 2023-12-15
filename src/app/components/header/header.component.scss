@@ -1,8 +1,6 @@
 @import '../../../styles.scss';
-.navbar-collapse.show {
-  background-color: black; /* Cambia el color de fondo del menú desplegado a negro */
-  z-index: 2; /* Asegura que el menú desplegado esté encima del contenido */
-  /* Añade cualquier otro estilo que desees para el menú desplegado */
+.navbar-collapse.show, .custom-toggler-button {
+  background-color: var(--black);
 }
 
 .navbar{

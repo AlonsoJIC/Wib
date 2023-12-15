@@ -9,6 +9,8 @@ import { CatComponent } from './components/animations/cat/cat.component';
 import { TitleComponent } from './components/animations/title/title.component';
 import { SubtitleComponent } from './components/animations/subtitle/subtitle.component';
 import { ScrollDownArrowComponent } from './components/animations/scroll-down-arrow/scroll-down-arrow.component';
+import { ButtonComponent } from './components/button/button.component';
+import { ServicesComponent } from './pages/services/services.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { ScrollDownArrowComponent } from './components/animations/scroll-down-ar
     TitleComponent,
     SubtitleComponent,
     ScrollDownArrowComponent,
+    ButtonComponent,
+    ServicesComponent,
   ],
   imports: [
     BrowserModule,
